@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hạ Tấn Bình</title>
+	<style type="text/css">
+		form{
+			height: 400px;
+			width: 500px;
+			background: green;
+			margin: 0 auto;
+			border: 2px solid red;
+		}
+		#cannang{
+			margin-left: 100px;
+			margin-top: 30px;
+		}
+		#chieucao{
+			margin-left: 100px;
+			margin-top: 10px;
+		}
+		#button{
+			margin-left: 100px;
+			margin-top: 20px;
+			background:pink;
+		}
+		p{
+			font-size:30px;
+			text-align: center;
+			color: red;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<p>BMI</p>
+		<input type="text" name="" id="cannang" style="height: 30px; width: 300px;"><br><br>
+		<input type="text" name="" id="chieucao" style="height: 30px; width: 300px;"><br><br>
+		<button id="button" style="height: 35px; width: 100px;">Tính chỉ số BMI</button>
+	</form>
+	<script type="text/javascript">
+		var cannang1 = document.getElementById('cannang');
+		var chieucao1 = document.getElementById('chieucao');
+		var button1 = document.getElementById('button');
+		button1.addEventListener('click', function () {
+			var a = cannang1.value;
+			var b  = chieucao1.value;
+			var n = Number(a) + Number(Math.sqrt(b));
+			if (n <18.5) {
+			    alert('thiếu cân!');
+			} else if (n <= 25) {
+				alert('bình thường!');
+			}
+			else if (n >25) {
+				alert('thừa cân!');
+			}
+		});
+
+	</script>
+
+</body>
+</html>
